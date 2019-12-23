@@ -83,7 +83,7 @@ Resposta: ```137978```
 Resposta: ```20901```
 
 3. Quais dias do período especificado tiveram o maior número de erros 404.
-Resposta: Abaixo é possível ver a lista ordenada, sendo o dia 13/07/1995 o dia com maior índice de erro 404, seguido do dia 06/07/1995
+Resposta: Abaixo é possível ver a lista ordenada, sendo o dia 06/07/1995 o dia com maior índice de erro 404, seguido do dia 19/07/1995
 
 ``` 
 Dia 06/07/1995: 640 ocorrências de Erro 404 
