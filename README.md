@@ -83,6 +83,15 @@ Resposta: ```9268```
 Resposta: ```20901```
 
 3. Quais dias do período especificado tiveram o maior número de erros 404.
+Resposta:
+
+``` 
+    Dia 13/07/1995 : 134203 ocorrências 404
+    Dia 06/07/1995 : 100960 ocorrências 404
+    Dia 05/07/1995 : 94575 ocorrências 404
+    Dia 12/07/1995 : 92536 ocorrências 404
+    Dia 31/08/1995 : 90125 ocorrências 404
+```
 
 4. O total de bytes retornados no período, com uma visão acumulada. Por exemplo, se no
 dia 1 tivemos 50 bytes, dia 2 tivemos 100 bytes e dia 3 mais 150 bytes, sua resposta
