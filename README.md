@@ -60,6 +60,10 @@ Desta maneira, desenhei um exemplo de pipeline que capta dados de diversas fonte
 
 #### Resposta:
 
+Data skew é distribuição do processamento é assimétrico de dados em operações de joins e aggregation que acarreta um processamento mais lento, mais custo e com necessidade de maior recurso.
+Como uma possível solução, podemos realizar o reprocessamento dos dados, quebrando uma estrutura em partições menores de processamento. Por exemplo, se temos uma tabela assimétrica A com muitos dados com campos nulos que precisam ser processados, podemos particionar essa tabela A em dois menores blocos (“a” com dados non-null e “b” com dados null) e realizar os joins ou aggregation separadamente.
+
+
 ### 3. O dia a dia de um engenheiro de dados, dentre outras tarefas, é disponibilizar as informações em alta performance (próximos a real-time) para Analistas e Cientistas de Dados de modo a possibilitar à análise e criação de modelos estatísticos. De que modo e quais tecnologias você usaria para disponibilizar os dados para estas pessoas.
 
 #### Resposta:
