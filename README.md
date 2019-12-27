@@ -39,9 +39,9 @@ Para obter o resultado do teste técnico, basta execute as linhas do caderno
 
 ```ame_resolucao.ipynb ```
 
-### BIG DATA - TEÓRICO - Respostas
+## BIG DATA - TEÓRICO - Respostas
 
-1. Considerando que a Ame possui diferentes aplicações, resultando em diferentes fontes
+### 1. Considerando que a Ame possui diferentes aplicações, resultando em diferentes fontes
 de dados (como bancos relacionais e noSQL), de que maneira você construiria uma
 arquitetura para realizar a ingestão desses dados em uma plataforma de Big Data?
 Descreva as tecnologias que você escolheria para realizar a ingestão, bem como o fluxo
@@ -61,26 +61,17 @@ Desta maneira, desenhei um exemplo de pipeline que capta dados de diversas fonte
 
 ![Alt text](img/Geral_pipeline_example-2.png?raw=true "Modelo de Data Pipeline")
 
-2. Ao utilizar ferramentas de processamento distribuído como Spark ou Hive, é muito
-comum enfrentar problemas relacionados à má distribuição de dados entre as máquinas
-do cluster, diminuindo drasticamente a performance das aplicações, principalmente em
-operações relacionadas a agregação ou join. Utilizando seus conhecimentos e
-experiências, descreva uma possível solução para o problema em questão.
+### 2. Ao utilizar ferramentas de processamento distribuído como Spark ou Hive, é muito comum enfrentar problemas relacionados à má distribuição de dados entre as máquinas do cluster, diminuindo drasticamente a performance das aplicações, principalmente em operações relacionadas a agregação ou join. Utilizando seus conhecimentos e experiências, descreva uma possível solução para o problema em questão.
 
 #### Resposta:
 
-3. O dia a dia de um engenheiro de dados, dentre outras tarefas, é disponibilizar as
-informações em alta performance (próximos a real-time) para Analistas e Cientistas de
-Dados de modo a possibilitar à análise e criação de modelos estatísticos. De que modo
-e quais tecnologias você usaria para disponibilizar os dados para estas pessoas.
+### 3. O dia a dia de um engenheiro de dados, dentre outras tarefas, é disponibilizar as informações em alta performance (próximos a real-time) para Analistas e Cientistas de Dados de modo a possibilitar à análise e criação de modelos estatísticos. De que modo e quais tecnologias você usaria para disponibilizar os dados para estas pessoas.
 
 #### Resposta:
 
 Dentro do exemplo dado no exercício 1, todo o dado recebido na pipeline ficará disponível em ambiente distribuído (como HDFS) e poderá ser consumindo por jupyter notebooks em um sandbox para exploração de dados por cientistas e analistas. Além disso, todo o dado histórico e analítico pode ser armazenado em um data warehouse (como o Hive DB ou quando falamos de soluções em nuvem como AWS Redshift ou um banco de dados Oracle Data Warehouse), para consumo de dashboards, como também para elaboração de Business reports. Além disso, é possível que realizar análises da própria pipeline dentro da estrutura de documentos
 
-4. Por fim, tendo em mente o crescimento exponencial dos dados e utilização massiva da
-plataforma de Big Data, quais métodos de organização e/ou governança você
-implementaria para manter o ambiente sustentável?
+### 4. Por fim, tendo em mente o crescimento exponencial dos dados e utilização massiva da plataforma de Big Data, quais métodos de organização e/ou governança você implementaria para manter o ambiente sustentável?
 
 #### Resposta:
 
