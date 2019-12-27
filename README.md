@@ -41,12 +41,7 @@ Para obter o resultado do teste técnico, basta execute as linhas do caderno
 
 ## BIG DATA - TEÓRICO - Respostas
 
-### 1. Considerando que a Ame possui diferentes aplicações, resultando em diferentes fontes
-de dados (como bancos relacionais e noSQL), de que maneira você construiria uma
-arquitetura para realizar a ingestão desses dados em uma plataforma de Big Data?
-Descreva as tecnologias que você escolheria para realizar a ingestão, bem como o fluxo
-de dados entre elas (lembrando que o objetivo é disponibilizar as informações o mais
-próximo de "real-time" possível).
+### 1. Considerando que a Ame possui diferentes aplicações, resultando em diferentes fontes de dados (como bancos relacionais e noSQL), de que maneira você construiria uma arquitetura para realizar a ingestão desses dados em uma plataforma de Big Data? Descreva as tecnologias que você escolheria para realizar a ingestão, bem como o fluxo de dados entre elas (lembrando que o objetivo é disponibilizar as informações o mais próximo de "real-time" possível).
 
 #### Resposta:
 
@@ -159,9 +154,7 @@ Dia 22-07-1995: 192 ocorrências de Erro 404
 Dia 28-07-1995: 94 ocorrências de Erro 404
 ```
 
-### 4. O total de bytes retornados no período, com uma visão acumulada. Por exemplo, se no
-dia 1 tivemos 50 bytes, dia 2 tivemos 100 bytes e dia 3 mais 150 bytes, sua resposta
-deverá ser: Dia 1 = 50 bytes, Dia 2 = 150 bytes, Dia 3 = 300 bytes.
+### 4. O total de bytes retornados no período, com uma visão acumulada. Por exemplo, se no dia 1 tivemos 50 bytes, dia 2 tivemos 100 bytes e dia 3 mais 150 bytes, sua resposta deverá ser: Dia 1 = 50 bytes, Dia 2 = 150 bytes, Dia 3 = 300 bytes.
 
 #### Resposta: 
 Abaixo a lista ordenada por data e proporção acumulada de bytes retornados
@@ -228,7 +221,7 @@ Dia 31-08-1995: 3461612 Bytes
 
 ## Versionamento
 
- Repositório no Github [tags on this repository](https://github.com/your/project/tags). 
+ Repositório no Github [tags on this repository](https://github.com/DennCardoso/Ame-Digital-Nasa). 
 
 ## Autor
 
