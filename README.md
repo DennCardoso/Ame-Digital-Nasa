@@ -29,9 +29,9 @@ Foram utilizadas as seguintes ferramentas para desenvolver a solução técnica:
 * [JupyterNotebook](https://jupyter.org/) - Development IDE
 
 Linguagens:
-    * [Python3.7](https://www.python.org/)
-    * [ApacheSpark](https://spark.apache.org/)
-    *[SparkSQL](https://spark.apache.org/sql/)
+* [Python3.7](https://www.python.org/)
+* [ApacheSpark](https://spark.apache.org/)
+* [SparkSQL](https://spark.apache.org/sql/)
 
 ### Instalação e execução
 
