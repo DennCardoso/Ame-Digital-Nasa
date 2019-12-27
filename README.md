@@ -50,6 +50,16 @@ próximo de "real-time" possível).
 
 Resposta:
 
+Uma pipeline de dados normalmente recebe dados de diversas fontes externas, sendo essas, banco de dados de aplicações, Data Warehouses, arquivos manuais (xlsx, csv, txt, etc), bem como também dados em tempo real gerado por eventos (Dados de localização GPS, páginas web, sensores, celulares, por exemplo). Pensando em um pipeline focado em real-time para as soluções da Ame Digital, precisamos acomodar essa infraestrutura em três principais camadas: 1. camada in-memory storage para ingestão rápida; 2. Uma arquitetura com escalabilidade horizontal; 3. Que os dados sejam consultáveis e que permita exploração interativa, em tempo real. Pensando nesse contexto, teríamos uma pipeline na seguinte estrutura:
+
+ ![Alt text](img/Pipeline_01.png?raw=true "Estrutura de Pipeline")
+
+Baseado na estrutura da imagem acima, utilizaria Apache Kafka como o sistema de mensagens, que orquestraria o recebimento de dados entre os sistemas externos (que chamamos de produtores) e disponibilizaria os dados para os sistemas internos (os consumidores). Esse processo é escalável, uma vez que o Kafka possui características de sistema distribuído.
+Para a fase de transformação de dados, Spark pode ser utilizado como um captador de dados do Kafka, para tratamento de um dataset, enriquecimento dos dados e/ou persistência dos dados captados em tempo real para uma base de dados
+E para análise dos dados em real-time e histórico, os dados podem ser trabalhados além do ambiente de streaming e de transformação, podem então persisti-los em base de dados. 
+Desta maneira, desenhei um exemplo de pipeline que capta dados de diversas fontes (sejam essas estruturadas e/ou não estruturadas), utilizando de tecnologias que possam gerar tópicos de captação do dado, armazenamento distribuído, tratamento e enriquecimento do dado, persistência de dados in-memory e por fim, a disponibilização desse dado para cientistas e para analistas. Além disso, adicionei um layer que permite o controle dos processos do workflow, armazenando logs de execução e tratamento e disponibilizando dashboard analítico para auxiliar engenheiros na manutenção do ambiente.
+
+
 2. Ao utilizar ferramentas de processamento distribuído como Spark ou Hive, é muito
 comum enfrentar problemas relacionados à má distribuição de dados entre as máquinas
 do cluster, diminuindo drasticamente a performance das aplicações, principalmente em
@@ -64,6 +74,8 @@ Dados de modo a possibilitar à análise e criação de modelos estatísticos. D
 e quais tecnologias você usaria para disponibilizar os dados para estas pessoas.
 
 Resposta:
+
+Dentro do exemplo dado no exercício 1, todo o dado recebido na pipeline ficará disponível em ambiente distribuído (como HDFS) e poderá ser consumindo por jupyter notebooks em um sandbox para exploração de dados por cientistas e analistas. Além disso, todo o dado histórico e analítico pode ser armazenado em um data warehouse (como o Hive DB ou quando falamos de soluções em nuvem como AWS Redshift ou um banco de dados Oracle Data Warehouse), para consumo de dashboards, como também para elaboração de Business reports. Além disso, é possível que realizar análises da própria pipeline dentro da estrutura de documentos
 
 4. Por fim, tendo em mente o crescimento exponencial dos dados e utilização massiva da
 plataforma de Big Data, quais métodos de organização e/ou governança você
