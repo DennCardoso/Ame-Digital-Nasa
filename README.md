@@ -59,6 +59,7 @@ Para a fase de transformação de dados, Spark pode ser utilizado como um captad
 E para análise dos dados em real-time e histórico, os dados podem ser trabalhados além do ambiente de streaming e de transformação, podem então persisti-los em base de dados. 
 Desta maneira, desenhei um exemplo de pipeline que capta dados de diversas fontes (sejam essas estruturadas e/ou não estruturadas), utilizando de tecnologias que possam gerar tópicos de captação do dado, armazenamento distribuído, tratamento e enriquecimento do dado, persistência de dados in-memory e por fim, a disponibilização desse dado para cientistas e para analistas. Além disso, adicionei um layer que permite o controle dos processos do workflow, armazenando logs de execução e tratamento e disponibilizando dashboard analítico para auxiliar engenheiros na manutenção do ambiente.
 
+![Alt text](img/Geral_pipeline_example-2.png?raw=true "Modelo de Data Pipeline")
 
 2. Ao utilizar ferramentas de processamento distribuído como Spark ou Hive, é muito
 comum enfrentar problemas relacionados à má distribuição de dados entre as máquinas
