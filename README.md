@@ -48,7 +48,7 @@ Descreva as tecnologias que você escolheria para realizar a ingestão, bem como
 de dados entre elas (lembrando que o objetivo é disponibilizar as informações o mais
 próximo de "real-time" possível).
 
-Resposta:
+#### Resposta:
 
 Uma pipeline de dados normalmente recebe dados de diversas fontes externas, sendo essas, banco de dados de aplicações, Data Warehouses, arquivos manuais (xlsx, csv, txt, etc), bem como também dados em tempo real gerado por eventos (Dados de localização GPS, páginas web, sensores, celulares, por exemplo). Pensando em um pipeline focado em real-time para as soluções da Ame Digital, precisamos acomodar essa infraestrutura em três principais camadas: 1. camada in-memory storage para ingestão rápida; 2. Uma arquitetura com escalabilidade horizontal; 3. Que os dados sejam consultáveis e que permita exploração interativa, em tempo real. Pensando nesse contexto, teríamos uma pipeline na seguinte estrutura:
 
@@ -67,14 +67,14 @@ do cluster, diminuindo drasticamente a performance das aplicações, principalme
 operações relacionadas a agregação ou join. Utilizando seus conhecimentos e
 experiências, descreva uma possível solução para o problema em questão.
 
-## Resposta:
+#### Resposta:
 
 3. O dia a dia de um engenheiro de dados, dentre outras tarefas, é disponibilizar as
 informações em alta performance (próximos a real-time) para Analistas e Cientistas de
 Dados de modo a possibilitar à análise e criação de modelos estatísticos. De que modo
 e quais tecnologias você usaria para disponibilizar os dados para estas pessoas.
 
-## Resposta:
+#### Resposta:
 
 Dentro do exemplo dado no exercício 1, todo o dado recebido na pipeline ficará disponível em ambiente distribuído (como HDFS) e poderá ser consumindo por jupyter notebooks em um sandbox para exploração de dados por cientistas e analistas. Além disso, todo o dado histórico e analítico pode ser armazenado em um data warehouse (como o Hive DB ou quando falamos de soluções em nuvem como AWS Redshift ou um banco de dados Oracle Data Warehouse), para consumo de dashboards, como também para elaboração de Business reports. Além disso, é possível que realizar análises da própria pipeline dentro da estrutura de documentos
 
@@ -82,7 +82,7 @@ Dentro do exemplo dado no exercício 1, todo o dado recebido na pipeline ficará
 plataforma de Big Data, quais métodos de organização e/ou governança você
 implementaria para manter o ambiente sustentável?
 
-## Resposta:
+#### Resposta:
 
 Quando pensando em governança de dados em um ambiente Big data, considero que temos pilares que devem ser colocadas em pauta, como segurança e custo efetivo. 
 Quando tratamento de segurança, podemos considerar o controle de acessos de usuários dentro clusters como hadoop utilizando do Apache Ambari, pois viabiliza um controle total de todo o processo do ambiente distribuído, bem como controle das roles de usuário. Se falamos de ambiente Cloud (como, por exemplo, AWS), podemos considerar o controle de toda a pipeline de dados por meio do IAM, onde podemos adicionar policies para as roles, garantindo a segurança de acesso. 
